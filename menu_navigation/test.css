@@ -8,7 +8,7 @@ html, body {
 }
 
 /* reset our lists to remove bullet points and padding */
-.mainmenu, .submenu, .submenumenu {
+.mainmenu, .submenu, .subsubmenu {
   list-style: none;
   padding: 0;
   margin: 0;
