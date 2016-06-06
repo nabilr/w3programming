@@ -26,13 +26,15 @@ li.hassub a:after {
 } 
 
 
+
+
 li.hassub:hover li.nosub a:after {
 
   padding:10px;  content:none;
 
 } 
 
-li.hassub:hover li.hassub a:after {
+li.hassub li.hassub a:after {
 
   padding:10px;    content:url(https://raw.githubusercontent.com/nabilr/w3programming/master/menu_navigation/icons/icon_plus.png);
 
@@ -47,7 +49,17 @@ li.hassub:hover a:after {
 
   padding:10px;  content:url(https://raw.githubusercontent.com/nabilr/w3programming/master/menu_navigation/icons/icon_minus.png);
 
-} 
+}
+
+li li.hassub:hover a:after {
+
+  padding:10px;  content:url(https://raw.githubusercontent.com/nabilr/w3programming/master/menu_navigation/icons/icon_minus.png);
+
+}
+
+
+
+
 
 
 
