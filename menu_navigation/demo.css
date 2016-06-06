@@ -34,12 +34,13 @@ li.hassub:hover li.nosub a:after {
 
 li.hassub:hover li.hassub a:after {
 
-  padding:10px;  content:url(https://raw.githubusercontent.com/nabilr/w3programming/master/menu_navigation/icons/icon_plus.png);
+  padding:10px;    content:url(https://raw.githubusercontent.com/nabilr/w3programming/master/menu_navigation/icons/icon_plus.png);
 
 } 
 
 li.hassub:hover li.hassub li.nosub a:after {
   padding:10px;  content:none;
+  margin: 10;
 }
 
 li.hassub:hover a:after {
@@ -76,8 +77,15 @@ li.hassub:hover a:after {
   */
 
 
+li.hassub:hover li  a {
+  padding-left:40px
+}
 
+li.hassub:hover li  li a {
+  padding-left:60px
+}
   .mainmenu li:hover .submenu {
+
    display: block;
    max-height: 200px;
  }
