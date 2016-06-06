@@ -9,12 +9,18 @@ html, body {
 
 /* reset our lists to remove bullet points and padding */
 .mainmenu, .submenu, .subsubmenu {
-  list-style: none;
+/*  list-style-type: none;
+  list-style-image: url('icons/icon_plus.png');*/
   padding: 0;
   margin: 0;
 }
 
 
+li a:after {
+
+  content:url(icons/icon_plus.png);
+
+}
 
 /* make ALL links (main and submenu) have padding and background color */
 .mainmenu a {
@@ -28,6 +34,7 @@ html, body {
 /* add hover behaviour */
 .mainmenu a:hover {
     background-color: #C5C5C5;
+
 }
 
 
@@ -38,7 +45,6 @@ html, body {
 
 
 
-:q;
 .mainmenu li:hover .submenu {
   display: block;
   max-height: 200px;
