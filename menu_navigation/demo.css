@@ -1,5 +1,5 @@
 html, body {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* define a fixed width for the entire menu */
@@ -10,17 +10,49 @@ html, body {
 /* reset our lists to remove bullet points and padding */
 .mainmenu, .submenu, .subsubmenu {
 /*  list-style-type: none;
-  list-style-image: url('icons/icon_plus.png');*/
-  padding: 0;
-  margin: 0;
+list-style-image: url('icons/icon_plus.png');*/
+padding: 0;
+margin: 0;
 }
 
 
-li a:after {
 
-  content:url(icons/icon_plus.png);
 
+
+li.hassub a:after {
+
+  padding:10px;  content:url(https://raw.githubusercontent.com/nabilr/w3programming/master/menu_navigation/icons/icon_plus.png);
+
+} 
+
+
+li.hassub:hover li.nosub a:after {
+
+  padding:10px;  content:none;
+
+} 
+
+li.hassub:hover li.hassub a:after {
+
+  padding:10px;  content:url(https://raw.githubusercontent.com/nabilr/w3programming/master/menu_navigation/icons/icon_plus.png);
+
+} 
+
+li.hassub:hover li.hassub li.nosub a:after {
+  padding:10px;  content:none;
 }
+
+li.hassub:hover a:after {
+
+  padding:10px;  content:url(https://raw.githubusercontent.com/nabilr/w3programming/master/menu_navigation/icons/icon_minus.png);
+
+} 
+
+
+
+
+
+
 
 /* make ALL links (main and submenu) have padding and background color */
 .mainmenu a {
@@ -33,7 +65,7 @@ li a:after {
 
 /* add hover behaviour */
 .mainmenu a:hover {
-    background-color: #C5C5C5;
+  background-color: #C5C5C5;
 
 }
 
@@ -41,16 +73,16 @@ li a:after {
 /* when hovering over a .mainmenu item,
   display the submenu inside it.
   we're changing the submenu's max-height from 0 to 200px;
-*/
+  */
 
 
 
-.mainmenu li:hover .submenu {
-  display: block;
-  max-height: 200px;
-}
+  .mainmenu li:hover .submenu {
+   display: block;
+   max-height: 200px;
+ }
 
-.mainmenu  .submenu li:hover .subsubmenu {
+ .mainmenu  .submenu li:hover .subsubmenu {
   display: block;
   max-height: 200px;
 }
@@ -60,36 +92,36 @@ li a:after {
 /*
   we now overwrite the background-color for .submenu links only.
   CSS reads down the page, so code at the bottom will overwrite the code at the top.
-*/
+  */
 
-.submenu a {
-  background-color: #999;
-}
+  .submenu a {
+    background-color: #999;
+  }
 
 
 
-/* hover behaviour for links inside .submenu */
-.submenu a:hover {
-  background-color: #666;
-}
+  /* hover behaviour for links inside .submenu */
+  .submenu a:hover {
+    background-color: #666;
+  }
 
-.subsubmenu a:hover {
-  background-color: #499;
-}
+  .subsubmenu a:hover {
+    background-color: #499;
+  }
 
 
 /* this is the initial state of all submenus.
   we set it to max-height: 0, and hide the overflowed content.
-*/
-.submenu {
-  overflow: hidden;
-  max-height: 0;
-  -webkit-transition: all 0.5s ease-out;
-}
+  */
+  .submenu {
+    overflow: hidden;
+    max-height: 0;
+    -webkit-transition: all 0.5s ease-out;
+  }
 
 
-.subsubmenu {
-  overflow: hidden;
-  max-height: 0;
-  -webkit-transition: all 0.5s ease-out;
-}
+  .subsubmenu {
+    overflow: hidden;
+    max-height: 0;
+    -webkit-transition: all 0.5s ease-out;
+  }
