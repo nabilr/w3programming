@@ -1,0 +1,49 @@
+html, body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* define a fixed width for the entire menu */
+
+.mainmenu  {
+    display: inline-block;
+    width: 1000px;
+    padding: 0;
+}
+
+
+.mainmenu  ul {
+
+    padding: 0;
+
+}
+
+.mainmenu > li {
+
+    display: block;
+}
+
+
+
+/* make ALL links (main and submenu) have padding and background color */
+
+ li.hassub > a span {
+     
+
+    /*  width and text-align is valid if display attribute is provided*/
+    display: block;
+    width: 150px;
+    text-align: left;
+    background:url(icons/icon_plus.png) 96% center no-repeat ;
+ 
+
+}
+
+
+
+
+
+
+
+
+
+

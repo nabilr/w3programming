@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+  <title>My first styled page</title>
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+<script>
+
+$(document).ready(function () {
+
+
+  $('.mainmenu  ul').parent().addClass('hassub');
+  $('.mainmenu  ul  li').css('display', 'none');
+  
+  $("li.hassub > a").click( function (e) {
+
+    console.log("click has sub")
+
+    if ($(this).hasClass('active')) {
+        console.log("click has sub active")
+         $(this).parent().find('a').removeClass('active');
+        $(this).parent().find('li').css('display', 'none')
+        $(this).parent().find('li.hassub > a span').css('background', 'url(icons/icon_plus.png) 96% center no-repeat');
+        $(this).parent().find('> a span').css('background', 'url(icons/icon_plus.png) 96% center no-repeat');
+    } else {
+        
+     $(this).parent().find('> ul > li').css('display', 'block')
+      $(this).parent().find('> a span').css('background', 'url(icons/icon_minus.png) 96% center no-repeat');
+          
+      $(this).addClass('active');
+
+    }
+
+  });
+});
+
+</script>
+<style type="text/css">
+</style>
+<link rel="stylesheet" href="demo.css">
+<body>
+
+
+  <nav class="navigation">
+    <ul class="mainmenu">
+      <li><a href="#">  <span> main_menu1  </span>  </a></li>
+      <li><a href="#">  <span> main_menu2  </span>  </a></li>
+      <li ><a href="#">  <span> main_menu3  </span>  </a>
+       
+        <ul>
+          
+          <li>
+            
+            <a href="#">  <span> sub_menu1  </span>  </a>
+            
+            <ul>
+              <li><a href="#"><span> sub_sub_menu1  </span></a></li>
+              <li><a href="#"><span> sub_sub_menu2  </span></a></li>
+            </ul>
+            <li><a href="#"><span> sub_menu2  </span></a>
+                <ul>
+                  <li><a href="#"><span> sub_sub_menu21  </span></a></li>
+                  <li><a href="#"><span> sub_sub_menu22  </span></a></li>
+                </ul>
+            
+            </li>
+            <li><a href="#"><span> sub_menu3  </span></a></li>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#">Contact us</a></li>
+    </ul>
+  </nav>
+
+
+</body>
+</html>
